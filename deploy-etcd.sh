@@ -2,7 +2,7 @@
 
 set -e
 
-# 1 download and install CFSSL
+# 1 download and install etcd 
 echo "$(date -d today +'%Y-%m-%d %H:%M:%S') - [INFO] - download etcd ... "
 # etcd-v3.3.2-linux-amd64.tar.gz
 ETCD_VER=v3.3.2
