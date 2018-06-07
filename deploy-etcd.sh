@@ -83,7 +83,8 @@ cd ./ssl/etcd && \
 
 # 3 distribute etcd pem
 echo "$(date -d today +'%Y-%m-%d %H:%M:%S') - [INFO] - distribute etcd pem ... "
-ansible master -m copy -a "src=ssl/etcd/ dest=/etc/etcd/ssl"
+ansible all -m copy -a "src=ssl/etcd/ dest=/etc/etcd/ssl"
+ansible all -m copy -a "src=ssl/etcd/ dest=/etc/kubernetes/ssl"
 
 # 4 generate etcd systemd unit
 mkdir -p ./systemd-unit
